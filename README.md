@@ -45,7 +45,7 @@ else:
 ```
 ![Image text](https://github.com/zhengchunqiu/Colorize/blob/master/colorized_deoldify_2.png)
 
-### tuning the render_factor
+### Tuning the render_factor
 ```
 for i in range(10,46,2):
   colorize.plot_transformed_image('test_images/image.png',render_factor=i,display_render_factor=True,figsize=(8,8))
@@ -70,5 +70,3 @@ if source_url is not None and source_url !='':
 else:
     print('Provide a video url and try again.')
 ```
-
-
