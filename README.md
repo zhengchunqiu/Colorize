@@ -45,8 +45,7 @@ if source_url is not None and source_url !='':
 else:
   print('Provide an image url and try again.')
 ```
-
-
+![Image text](https://github.com/zhengchunqiu/Colorize/blob/master/colorized_deoldify_2.png)
 
 
 ## Colorzie video
