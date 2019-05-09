@@ -1,7 +1,5 @@
 # Colorize
 
-
-
 ## Git clone and install DeOldify
 ```
 !git clone https://github.com/jantic/DeOldify.git DeOldify
@@ -47,10 +45,30 @@ else:
 ```
 ![Image text](https://github.com/zhengchunqiu/Colorize/blob/master/colorized_deoldify_2.png)
 
+### tuning the render_factor
+```
+for i in range(10,46,2):
+  colorize.plot_transformed_image('test_images/image.png',render_factor=i,display_render_factor=True,figsize=(8,8))
+```
 
 ## Colorzie video
+### Download pretrained weights
 ```
 !mkdir 'models'
 !wget wget https://www.dropbox.com/s/zkehq1uwahhbc2o/ColorizeArtistic_gen.pth?dl=0 -O ./models/ColorizeArtistic_gen.pth
 ```
+### Colorize
+```
+colorizer=get_video_colorizer()
+
+source_url = 'https://www.youtube.com/watch?v=gSnKWwRCWnw' #@param {type:"string"}
+render_factor = 21  #@param {type: "slider", min: 5, max: 44}
+
+if source_url is not None and source_url !='':
+    video_path = colorizer.colorize_from_url(source_url, 'video.mp4', render_factor)
+    show_video_in_notebook(video_path)
+else:
+    print('Provide a video url and try again.')
+```
+
 
